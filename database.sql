@@ -4,20 +4,45 @@ Use sestyme_ecommerce ;
 
 CREATE table Utilisateur
     (
-    id int ,
-    nom varchar(50), 
-    email varchar(50)
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nom VARCHAR(255),
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nom VARCHAR(255) NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL,
+   
+    role ENUM('admin', 'utilisateur') DEFAULT 'utilisateur';
     )
+
+insert into Utilisateur values
+('abdelhak','abdelhak@gmail.com','admin'),
+insert into Utilisateur values
+('user','user@gmail.com','utilisateur');
 
 CREATE table Porudit
     (
-    id int,
+    id INT PRIMARY KEY AUTO_INCREMENT,,
     nom varchar(50),
     )
+insert into produit values 
+(
+    ('phone'),
+    ('pc'),
+    ('serveur');
+)
 
 CREATE table commande
     (
     id int,
-    id_client int,
-    date_commande date
+    id_client int FOREIGN KEY ,
+    date_commande date,
     )
+
+
+
+
+
+
+
+
+
+  
