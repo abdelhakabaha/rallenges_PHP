@@ -6,14 +6,12 @@ abstract class Produit
     private $prix;
     private $stock;
     private $type;
-    public function __construct($id, $nom, $prix, $stock){
+    public function __construct($id, $nom, $prix, $stock , $type){
     $this->$id->id;
     $this->$nom->nom;
     $this->$prix->prix;
     $this->$stock->stock;
     $this->$type->type;
-
-
     }
     public function getId(){
         return $this->id;
